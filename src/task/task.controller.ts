@@ -9,17 +9,17 @@ export class TaskController {
 
     @Post()
     create(@Body() task: TaskDto) {
-        this.taskService.create(task);
+        return this.taskService.create(task);
     }
 
-    @Get('/:id')
-    findById(@Param('id') id: string) {
-        return this.taskService.findById(id);
-    }
+    // @Get('/:id')
+    // findById(@Param('id') id: string) {
+    //     return this.taskService.findById(id);
+    // }
 
 
-    @Put()
-    update(@Body() task: TaskDto) {
-        return this.taskService.update(task);
-    }
+    // @Put()
+    // update(@Body() task: TaskDto) {
+    //     return this.taskService.update(task);
+    // }
 }

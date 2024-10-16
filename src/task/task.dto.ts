@@ -1,7 +1,11 @@
+import { UUID } from "crypto";
+import { TaskPriorityEnum } from "src/enum/priority";
+import { TaskStatusEnum } from "src/enum/task.enum";
+
 export class TaskDto {
-    id: string;
     title: string;
     description: string;
-    status: string;
-    expirationDate: Date;
+    status: TaskStatusEnum;
+    due_date: Date;
+    priority: TaskPriorityEnum
 }
